@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alien worlds Script Bot By.Alien-script">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+    <title id="user-bot">AW By Alien-script</title>
+    <link href="assets/style/style.css" rel="stylesheet">
+    <script src="assets/plugins/jquery/jquery-3.6.0.js"></script>
+    <script src="assets/static/js/waxjs.js" type="text/javascript"></script>
+    <script src="assets/plugins/sweetalert2/sweetalert2@10.js"></script>
+    <script async="" src="widget.min.js#KwrzvnhQ"></script>
+    <link href="assets/plugins/sweetalert2/dark.css" rel="stylesheet">
+    <link href="ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="css2.css?family=Mitr:wght@200;300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #191F28;
+            font-family: 'Mitr', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid h-100 my-lg-3 my-1">
+        <div class="row d-none d-lg-block">
+            <div class="col-12">
+                <div class="d-grid gap-2 d-lg-flex">
+                    <button type="button" id="btn-login" class="btn btn-lg border-0 ml-n5 btn-dark w-100 rounded-pill">LOGIN</button>
+                    <button type="button" id="btn-allitem" class="btn btn-lg btn-dark w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#allitem" disabled=""><i class="fas fa-crown"></i>
+                        NFTs</button>
+                    <button type="button" id="btn-tool" class="btn btn-lg btn-dark w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#setBag" disabled=""><i class="fas fa-hammer"></i> Mining
+                        tools</button>
+                    <button type="button" id="btn-land" class="btn btn-lg btn-dark w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#setLand" disabled=""><i class="fas fa-map-marked-alt"></i>
+                        Set Land</button>
+                    <button type="button" id="btn-stake" class="btn btn-lg btn-dark w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#setStake" disabled=""><i class="fas fa-wallet"></i>
+                        Finance</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center" style="border-radius: 25px;">
+            <div class="row m-lg-3">
+                <div class="col-12 col-lg-3 my-1 d-none d-lg-block">
+                    <div class="card-body info-log">
+                        <div class="text-center text-white">
+                            <img id='imgProfile' class="img-fluid mb-3" width="240" src="assets/img/logo.png">
+                            <h3 id="fullName">Hi, Anonymous</h3>
+                            <h5 id="tlmBalance">Please login so we can fetch your account's data.</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <div class="card-body info-log">
+                        <h4 class="d-none d-lg-block"><i class="fas fa-server"></i> Server</h4>
+                        <diïv class="row g-0">
+                            <div class="col-6">
+                                <label class="col-form-label">CPU <i id="stake-cpu" style="font-size: x-small;">Total
+                                        Staked
+                                        : 0 WAX</i></label>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" id="proCpu" style="width: 0%"></div>
+                            </div>
+
+                            <h5 id="nextMine" class="text-center mt-3"> Countdown time </h5>
+                            <div class="d-none d-lg-block">
+                                <div class="progress">
+                                    <div id="progressBar" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 100%; background-color:rgb(141, 197, 63) !important;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="card my-3 h-100" style="border-radius: 15px;">
+                                <div class="card-body tx-back">
+                                    <h5 class="text-center d-none d-lg-block "> Information </h5>
+                                    <div class="row" style="font-size: 0.800em;">
+                                        <div class="col-4 d-none d-lg-block ">
+                                            Land:
+                                        </div>
+                                        <div class="hover_img col-8 d-none d-lg-block ">
+                                            <a href="#" id="mine-land">Map (X:Y) </a>
+                                        </div>
+                                        <div class="col-4">
+                                            Last Mined:
+                                        </div>
+                                        <div class="col-8" id="mine-last">
+                                            0.0000 TLM [Date Time]
+                                        </div>
+                                        <div class="col-4">
+                                            Total Mined:
+                                        </div>
+                                        <div class="col-8" id="mine-total">
+                                            0.0000 TLM
+                                        </div>
+                                        <div class="col-4 d-none d-lg-block">
+                                            Mined Rate:
+                                        </div>
+                                        <div class="col-8 d-none d-lg-block" id="mine-rate">
+                                            0.0000 TLM / Hour
+                                        </div>
+                                        <div class="col-4">
+                                            Mined State:
+                                        </div>
+                                        <div class="col-8" id="mine-state">
+                                            -
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" text-center m-0">
+                                <p class="badge w-100 " style="font-size: 150%; background-color: #f78e1e; border-radius: 15px;">Your
+                                    current
+                                    balances <strong id="fin-tlm"> : 0.0000 TLM</strong></p>
+                            </div>
+                        </diïv>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-1 d-none d-lg-block">
+                    <div class="card-body info-log table-responsive">
+                        <h3><i class="fas fa-cogs"></i> Log Mine</h3>
+                        <table class="table table-sm text-white">
+                            <thead>
+                                <tr>
+                                    <th scope="col">DATE</th>
+                                    <th scope="col">LTM</th>
+                                </tr>
+                            </thead>
+                            <tbody id="log-mine">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <div class=" card d-none d-lg-block" style=" border-radius: 25px; border: 5px solid rgb(141, 197, 63);background: #191F28;">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="ks-cboxtags">
+                                            <div class="row p-3">
+                                                <div class="row d-flex">
+                                                    <div class="col-6">
+                                                        <h5 class="text-end text-white text-nowrap" style="margin-left: 15%;">
+                                                            Mined Time out</h5>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <select class="form-select rounded-pill" id="set-mine-time-out" style=" height: 27px; width: 85%; margin-bottom: 5px; margin-left: 25%; font-size: xx-small;
+                                                                        text-align-last: center;">
+                                                            <option value="60">1 Min.</option>
+                                                            <option value="120">2 Min.</option>
+                                                            <option value="180">3 Min.</option>
+                                                            <option value="240">4 Min.</option>
+                                                            <option value="300">5 Min.</option>
+                                                            <option value="600">10 Min.</option>
+                                                            <option value="900">15 Min.</option>
+                                                            <option value="99999999">Infinity</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12" id="c-mine">
+                                                    <input type="checkbox" id="cl-mine" checked=""><label for="cl-mine" id="l-mine">Mined Auto [ON]</label>
+                                                </div>
+                                                <div class="col-6" id="m-mine" style="display: none;">
+                                                    <button type="button" id="btn-login" class="btn btn-dark w-100 h-100 rounded-pill">Mined
+                                                        Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 p-3">
+                                        <div class="row d-flex">
+                                            <div class="col-4">
+                                                <h5 class="text-end text-white text-nowrap" style="margin-left: 25%;">
+                                                    ReLogin</h5>
+                                            </div>
+                                            <div class="col-8">
+                                                <select class="form-select rounded-pill" id="set-relogin" style=" height: 27px; width: 70%; margin-bottom: 5px; margin-left: 20%; font-size: xx-small;
+                                                                text-align-last: center;">
+                                                    <option value="15">15 Sec.</option>
+                                                    <option value="30">30 Sec.</option>
+                                                    <option value="60">1 Min.</option>
+                                                    <option value="90">1.30 Min.</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" id="btn-auto-login" class="btn w-100 rounded-pill" style="background-color: rgb(247, 142, 30); color: white;">Auto Login
+                                            [OFF]</button>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="row pt-3">
+                                            <div class="col-3">
+                                                <h5 class="text-center text-white">Server Wax</h5>
+                                                <div style="width: auto;">
+                                                    <select class="form-select rounded-pill" id="select-server" style="height: 37px; margin-top: 3px; font-size: small; text-align-last: center;">
+                                                        <option>[API] Default</option>
+                                                        <option>[API] Server-01</option>
+                                                        <option>[API] Server-02</option>
+                                                        <option>[API] Server-03</option>
+                                                        <option>[API] Server-04</option>
+                                                        <option>[API] Server-05</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <h5 class="text-center text-white">CPU Update</h5>
+                                                <select class="form-select rounded-pill" id="auto-update" style=" height: 37px; margin-top: 3px; font-size: small;
+                                                                text-align-last: center;">
+                                                    <option value="60">1 Min.</option>
+                                                    <option value="180">3 Min.</option>
+                                                    <option value="300">5 Min.</option>
+                                                    <option value="600">10 Min.</option>
+                                                    <option value="900">15 Min.</option>
+                                                    <option value="1800">30 Min.</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-3">
+                                                <h5 class="text-center text-white">CPU MAX</h5>
+                                                <input type="number" class="col-10 form-control rounded-pill text-center" id="setMax_cpu" min="0" step="5" value="100">
+                                            </div>
+                                            <div class="col-3">
+                                                <h5 class="text-center text-white" style="margin-left: -7%;">Unknown URL
+                                                </h5>
+                                                <div class="ks-cboxtags">
+                                                    <input type="checkbox" id="url-hide"><label for="url-hide" id="url-hide-text" style="width: 90%;">False</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="row my-3 d-none d-lg-block">
+                        <div class="col-lg-12">
+                            <div class="container-fluid">
+                                <div class="row justify-content-evenly">
+                                    <div class="col-auto">
+                                        <a href="index-1.htm" rel="noopener noreferrer" target="_blank">
+                                            <div class="app-item flex">
+                                                <img class="app-icon" alt="WAX.io" src="assets/img/icon/WAX.io.png" style="background-color: rgb(0, 0, 0); border-color: rgb(247, 142, 30);">
+                                                <div class="app-text text-center px-1">
+                                                    <div class="text-bold">WAX.io</div>
+                                                    <div class="text-medium" style="color: rgb(247, 142, 30);">Data
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="index-2.htm" rel="noopener noreferrer" target="_blank">
+                                            <div class="app-item flex">
+                                                <img class="app-icon" alt="WAX Bloks" src="assets/img/icon/WAX-Bloks.png" style="background-color: rgb(255, 255, 255); border-color: rgb(15, 70, 168);">
+                                                <div class="app-text text-center px-1">
+                                                    <div class="text-bold">WAX Bloks</div>
+                                                    <div class="text-medium" style="color: rgb(15, 70, 168);">Explorer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="index-3.htm" rel="noopener noreferrer" target="_blank">
+                                            <div class="app-item flex">
+                                                <img class="app-icon" alt="Atomic Market" src="assets/img/icon/logo-alcor.png" style="background-color: rgb(20, 25, 46); border-color: rgb(197, 63, 63);">
+                                                <div class="app-text text-center px-1">
+                                                    <div class="text-bold">Alcor Exchange</div>
+                                                    <div class="text-medium" style="color: rgb(197, 63, 63);">All in one
+                                                        DEX</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="assets/download/Alien-script [Auto Click Approve].zip" rel="noopener noreferrer" target="_blank">
+                                            <div class="app-item flex">
+                                                <img class="app-icon" alt="Atomic Market" src="assets/img/favicon/apple-touch-icon.png" style="background-color: rgb(20, 25, 46); border-color: rgb(141, 197, 63)">
+                                                <div class="app-text text-center px-1">
+                                                    <div class=" text-bold">Alien-script</div>
+                                                    <div class="text-medium">Extension [Chrome]</div>
+                                                    <div class="text-medium" style="color: rgb(141, 197, 63);">Auto
+                                                        click Approve</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center my-3">
+                            <u style="font-size: 18px; color: white;">Like this website? You can donate us by sending
+                                WAX to uhtu4.wam</u>
+                        </div>
+
+                        <!-- Modal setLand -->
+                        <div class="modal fade" id="setLand" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="setLandLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content" style="border-radius: 25px; background: #181E27; color:rgb(141, 197, 63);  border: 5px solid rgb(141, 197, 63);">
+                                    <div class="modal-header border-0">
+                                        <h1 class="modal-title" id="setLandLabel">Setup Land</h1>
+                                        <i class="far fa-times-circle fa-2x" data-bs-dismiss="modal"></i>
+                                    </div>
+                                    <div class="modal-body m-0 d-flex justify-content-center align-items-center">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="text-center">
+                                                    <img src="assets/img/imgMap.png" class="img-fluid p-2" id="imgLand-ID" alt="imgMap" style="border-radius: 15px; background: #232B39 0 0 no-repeat padding-box; border: 5px solid rgb(141, 197, 63);">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <input type="text" class="form-control w-100 rounded-pill" placeholder="ID LAND" id="id-land" aria-label="ID LAND" aria-describedby="button-check-land">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <button class="btn w-100 rounded-pill" type="button" style="background-color: rgb(247, 142, 30); color: white;" id="button-check-land">Check</button>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="card my-2" style="border-radius: 25px; background: #232B39 0 0 no-repeat padding-box; border: 5px solid rgb(141, 197, 63);">
+                                                    <div class="card-body">
+                                                        <div class="row g-0">
+                                                            <h5 class="text-center"> Information </h5>
+
+                                                            <div class="col-3">Name:</div>
+                                                            <div class="col-9" id="setMap_name"></div>
+
+                                                            <div class="col-3">Co-ordinate:</div>
+                                                            <div class="col-9" id="setMap_xy"></div>
+
+                                                            <div class="col-3">Charge Time:</div>
+                                                            <div class="col-9" id="setMap_time"></div>
+
+                                                            <div class="col-3">Maining:</div>
+                                                            <div class="col-9" id="setMap_ease"></div>
+
+                                                            <div class="col-3">NFT Luck:</div>
+                                                            <div class="col-9" id="setMap_nft"></div>
+
+                                                            <div class="col-3">Commission:</div>
+                                                            <div class="col-9" id="setMap_com"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn w-100 rounded-pill" style="background-color: rgb(247, 142, 30); color: white;" id="btn-setLand">SET
+                                                    LAND</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal setBag -->
+                        <div class="modal fade" id="setBag" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="setBagLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                <div class="modal-content" style="border-radius: 25px; background: #181E27; color:rgb(141, 197, 63);  border: 5px solid rgb(141, 197, 63);">
+                                    <div class="modal-header border-0">
+                                        <h5 class="modal-title" id="setBagLabel">Setup Tools Mine</h5>
+                                        <i class="far fa-times-circle fa-2x" data-bs-dismiss="modal"></i>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="col-12 col-lg-12 ">
+                                            <div class="row imgBagTools d-flex justify-content-center align-items-center">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer border-0">
+                                        <button type="button" class="btn w-100 rounded-pill" style="background-color: rgb(247, 142, 30); color: white;" id="btn-setBag">SET
+                                            BAG</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal All item -->
+                        <div class="modal fade" id="allitem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="allitemLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                <div class="modal-content" style="border-radius: 25px; background: #181E27; color:rgb(141, 197, 63); border: 5px solid rgb(141, 197, 63);">
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <h3 class="modal-title" id="allitemLabel">Transfer NFTs
+                                                </h3>
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" class="form-control text-center" placeholder="Receiving Account" id="user-transfer-nft" style="border-radius: 25px; background: #232B39; color:rgb(141, 197, 63);  border: 5px solid rgb(141, 197, 63);">
+                                            </div>
+                                            <div class="col-3">
+                                                <button class="btn btn-outline-secondary w-100" type="button" style="border-radius: 25px; background: #232B39; color:rgb(141, 197, 63);  border: 5px solid rgb(141, 197, 63);" id="btn-nft-transfer">Send</button>
+                                            </div>
+                                            <div class="col-1">
+                                                <i class="far fa-times-circle fa-3x" data-bs-dismiss="modal"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-12 ">
+                                            <div class="row imgBagAll d-flex justify-content-center align-items-center">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer border-0">
+                                        <button type="button" class="btn w-100 btn-sm rounded-pill" style="background-color: rgb(247, 142, 30); color: white;" id="btn-nft-claims">Claims NFTs</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal setStake -->
+                        <div class="modal fade" id="setStake" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="setStakeLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                <div class="modal-content mb-0" style="border-radius: 25px; background: #181E27; border: 5px solid rgb(141, 197, 63);">
+                                    <div class="modal-header border-0">
+                                        <h4 class="modal-title text-white" id="setStakeLabel"><i class="fas fa-wallet"></i>
+                                            Finance </h4>
+                                        <i class="far fa-times-circle fa-2x text-white" data-bs-dismiss="modal"></i>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="card h-100 d-none d-lg-block m-0" style="border-radius: 15px; border: 3px solid rgb(141, 197, 63); background: white;">
+                                            <div class="card-body p-3 ">
+                                                <h5>Stake CPU</h5>
+                                                <div class="row">
+                                                    <div class="col-10">
+                                                        <input type="text" class="form-control text-center" placeholder="0.00000000 WAX" id="cpu-stake" style="border-radius: 25px; background: #232B39; color:rgb(141, 197, 63);  border: 2px solid rgb(141, 197, 63);">
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button class="btn w-100" type="button" style="border-radius: 25px; background: rgb(247, 142, 30);" id="btn-cpu-stake">Stake</button>
+                                                    </div>
+                                                    <!-- <div class="col-3">
+                                                        <button class="btn w-100" type="button"
+                                                            style="border-radius: 25px; background: rgb(247, 142, 30);"
+                                                            id="btn-cpu-unstake">UnStake</button>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card h-100 d-none d-lg-block my-3" style="border-radius: 15px; border: 3px solid rgb(141, 197, 63); background: white;">
+                                            <div class="card-body p-3 ">
+                                                <h5 id="wax-user-total">Transfer WAX</h5>
+
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <input type="text" class="form-control text-center" placeholder="0.00000000 WAX" id="wax-transfer" style="border-radius: 25px; background: #232B39; color:rgb(141, 197, 63);  border: 2px solid rgb(141, 197, 63);">
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <input type="text" class="form-control text-center" placeholder="Receiving Account" id="user-transfer-wax" style="border-radius: 25px; background: #232B39; color:rgb(141, 197, 63);  border: 2px solid rgb(141, 197, 63);">
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button class="btn w-100" type="button" style="border-radius: 25px; background: rgb(247, 142, 30);" id="btn-wax-transfer">Send</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card h-100 d-none d-lg-block my-3" style="border-radius: 15px; border: 3px solid rgb(141, 197, 63); background: white">
+                                            <div class="card-body p-3 ">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <h5 class="mt-1">TLM/WAX</h5>
+                                                    </div>
+                                                    <div class="col-5 flex">
+                                                        <img class="app-icon-swap" src="assets/img/icon/wax_eosio.token.png" style="background-color: rgb(20, 25, 46); border-color: rgb(141, 197, 63)">
+                                                        <p class="mt-1" style="margin-left: 10px;" id="last-wax">1 WAX =
+                                                            0.00000000 TLM</p>
+                                                    </div>
+                                                    <div class="col-5 flex">
+                                                        <img class="app-icon-swap" src="assets/img/icon/tlm_alien.worlds.png" style="background-color: rgb(244, 246, 247); border-color: rgb(141, 197, 63)">
+                                                        <p class="mt-1" style="margin-left: 10px;" id="last-tlm">1 TLM =
+                                                            0.00000000 WAX</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <input type="text" class="form-control text-center" placeholder="TLM" id="ltm-transfer" style="border-radius: 25px; background: #232B39; color:rgb(141, 197, 63);  border: 2px solid rgb(141, 197, 63);">
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <input type="text" class="form-control text-center" placeholder="TLM -> WAX" id="tlm-wax" readonly="" style="border-radius: 25px; background: #232B39; color:rgb(141, 197, 63);  border: 2px solid rgb(141, 197, 63);">
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button class="btn w-100" type="button" style="border-radius: 25px; background: rgb(247, 142, 30);" id="btn-swap-transfer" disabled="">Swap</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            window.onload = async function () {
+                                await as_autologin()
+                            }
+                        </script>
+                        <script src="ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+                        <script src="ajax/libs/axios/0.21.1/axios.min.js"></script>
+                        <script src="ajax/libs/luxon/1.26.0/luxon.min.js"></script>
+                        <script src="ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+                        <script src="ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+                        <script src="ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+                        <script src="assets/static/js/bundle.js"></script>
+                        <script src="assets/static/js/main.js"></script>
+
+
+</div></div></body>
+
+</html>

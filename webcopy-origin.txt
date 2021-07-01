@@ -1,0 +1,136 @@
+Uri: https://mine.alien-script.com/
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\index.htm
+Content Type: text/html
+
+Uri: https://mine.alien-script.com/assets/img/favicon/apple-touch-icon.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\favicon\apple-touch-icon.png
+Content Type: image/png
+
+Uri: https://mine.alien-script.com/assets/img/favicon/favicon-32x32.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\favicon\favicon-32x32.png
+Content Type: image/png
+
+Uri: https://mine.alien-script.com/assets/img/favicon/favicon-16x16.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\favicon\favicon-16x16.png
+Content Type: image/png
+
+Uri: https://mine.alien-script.com/assets/img/favicon/site.webmanifest
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\favicon\site.webmanifest
+Content Type: 
+
+Uri: https://mine.alien-script.com/assets/style/style.css
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\style\style.css
+Content Type: text/css
+
+Uri: https://mine.alien-script.com/assets/plugins/sweetalert2/dark.css
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\plugins\sweetalert2\dark.css
+Content Type: text/css
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\ajax\libs\twitter-bootstrap\5.0.1\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\font-awesome\4.6.3\css\font-awesome.min.css
+Content Type: text/css
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\ajax\libs\font-awesome\5.15.3\css\all.min.css
+Content Type: text/css
+
+Uri: https://fonts.googleapis.com/css2?family=Mitr:wght@200;300&display=swap
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\css2.css
+Content Type: text/css
+
+Uri: https://wallet.wax.io/
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\index-1.htm
+Content Type: text/html
+
+Uri: https://wax.bloks.io/
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\index-2.htm
+Content Type: text/html
+
+Uri: https://wax.alcor.exchange/
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\index-3.htm
+Content Type: text/html
+
+Uri: https://mine.alien-script.com/assets/download/Alien-script [Auto Click Approve].zip
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\download\Alien-script [Auto Click Approve].zip
+Content Type: application/zip
+
+Uri: https://mine.alien-script.com/assets/plugins/jquery/jquery-3.6.0.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\plugins\jquery\jquery-3.6.0.js
+Content Type: application/javascript
+
+Uri: https://mine.alien-script.com/assets/static/js/waxjs.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\static\js\waxjs.js
+Content Type: application/javascript
+
+Uri: https://mine.alien-script.com/assets/plugins/sweetalert2/sweetalert2@10.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\plugins\sweetalert2\sweetalert2@10.js
+Content Type: application/javascript
+
+Uri: https://arc.io/widget.min.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\widget.min.js
+Content Type: application/javascript
+
+Uri: https://mine.alien-script.com/assets/img/logo.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\logo.png
+Content Type: image/png
+
+Uri: https://mine.alien-script.com/assets/img/icon/WAX.io.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\icon\WAX.io.png
+Content Type: image/png
+
+Uri: https://mine.alien-script.com/assets/img/icon/WAX-Bloks.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\icon\WAX-Bloks.png
+Content Type: image/png
+
+Uri: https://mine.alien-script.com/assets/img/icon/logo-alcor.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\icon\logo-alcor.png
+Content Type: image/png
+
+Uri: https://mine.alien-script.com/assets/img/imgMap.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\imgMap.png
+Content Type: image/png
+
+Uri: https://mine.alien-script.com/assets/img/icon/wax_eosio.token.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\icon\wax_eosio.token.png
+Content Type: image/png
+
+Uri: https://mine.alien-script.com/assets/img/icon/tlm_alien.worlds.png
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\img\icon\tlm_alien.worlds.png
+Content Type: image/png
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\ajax\libs\jquery-cookie\1.4.1\jquery.cookie.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\ajax\libs\axios\0.21.1\axios.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/luxon/1.26.0/luxon.min.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\ajax\libs\luxon\1.26.0\luxon.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\ajax\libs\twitter-bootstrap\5.0.1\js\bootstrap.bundle.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\ajax\libs\popper.js\2.9.2\umd\popper.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\ajax\libs\twitter-bootstrap\5.0.1\js\bootstrap.min.js
+Content Type: application/javascript
+
+Uri: https://mine.alien-script.com/assets/static/js/bundle.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\static\js\bundle.js
+Content Type: application/javascript
+
+Uri: https://mine.alien-script.com/assets/static/js/main.js
+File Name: C:\Downloaded Web Sites\mine.alien-script.com\assets\static\js\main.js
+Content Type: application/javascript
+

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Mitr';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mitr/v6/pxiEypw5ucZF8fMZFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mitr';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mitr/v6/pxiEypw5ucZF8ZcaFJA.ttf) format('truetype');
+}
